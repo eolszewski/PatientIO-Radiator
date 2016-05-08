@@ -2,12 +2,12 @@
 
   angular
     .module('app')
-    .controller('TableController', [
+    .controller('DashboardController', [
       'tableService',
-      TableController
+      DashboardController
     ]);
 
-  function TableController(tableService) {
+  function DashboardController(tableService) {
     var vm = this;
 
     vm.tableData = [];

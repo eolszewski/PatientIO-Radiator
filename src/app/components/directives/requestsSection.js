@@ -3,26 +3,25 @@
 
     angular
         .module('app')
-        .directive('messagesSection', messagesSectionDirective);
+        .directive('requestsSection', requestsSectionDirective);
 
-    function messagesSectionDirective() {
+    function requestsSectionDirective() {
         return {
             restrict: 'E',
             scope: {
                 title: '@',
                 theme: '@',
-                messages: '='
+                requests: '='
             },
             template: '' +
                       '<section>' +
                       '  <md-subheader ng-class="theme">{{title}}</md-subheader>' +
                       '  <md-list>' +
-                      '    <md-list-item class="md-3-line" ng-repeat="message in messages">' +
-                      '    <img class="md-avatar" ng-src="assets/images/einstein.jpg">' +
+                      '    <md-list-item class="md-3-line" ng-repeat="request in requests">' +
                       '    <div class="md-list-item-text">' +
-                      '      <h3>{{message.subject}}</h3>' +
-                      '      <h4>{{message.userName}}</h4>' +
-                      '      <p>{{message.text}}</p>' +
+                      '      <h3>{{request.timeStamp}}</h3>' +
+                      '      <h4>{{request.detail}}</h4>' +
+                      '      <p>{{request.url}}</p>' +
                       '    </div>' +
                       '    </md-list-item>' +
                       '  </md-list>' +

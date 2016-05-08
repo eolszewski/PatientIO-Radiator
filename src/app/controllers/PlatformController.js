@@ -2,11 +2,11 @@
 
   angular
     .module('app')
-    .controller('ProfileController', [
-      ProfileController
+    .controller('PlatformController', [
+      PlatformController
     ]);
 
-  function ProfileController() {
+  function PlatformController() {
     var vm = this;
 
     vm.user = {

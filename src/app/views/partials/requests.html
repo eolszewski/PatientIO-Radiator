@@ -1,0 +1,9 @@
+<div class="requests" ng-controller="RequestsController as vm">
+    <md-content class="requests-content">
+
+        <requests-section theme="md-primary" title="Successful" requests="vm.requests"></requests-section>
+        <requests-section theme="md-warn" title="Exceptions" requests="vm.requests"></requests-section>
+
+        <md-divider></md-divider>
+    </md-content>
+</div>

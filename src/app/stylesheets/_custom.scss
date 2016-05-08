@@ -1,6 +1,6 @@
 // COLORS
 $main-bg-color: #ECECEC;
-$text-color: #7A7A7A;
+$text-color: #FFFFFF;
 $accent-color: rgb(0, 150, 136);
 $warning-color: #E75753;
 
@@ -49,7 +49,7 @@ body {
 
 
 // COMPONENTS
-.messages {
+.requests {
   position: relative;
 
   &-content {
@@ -123,6 +123,7 @@ md-sidenav.md-locked-open.md-sidenav-left {
   width: $left-sidenav-width;
   min-width: $left-sidenav-width;
   max-width: $left-sidenav-width;
+  color: grey;
 }
 
 a.md-button.md-warn.md-raised, a.md-button.md-warn.md-fab, .md-button.md-warn.md-raised, .md-button.md-warn.md-fab {

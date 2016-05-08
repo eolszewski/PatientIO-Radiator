@@ -13,59 +13,56 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
         controllerAs: 'vm',
         abstract: true
       })
+      .state('home.platform', {
+        url: '/platform',
+        templateUrl: 'app/views/platform.html',
+        controller: 'PlatformController',
+        controllerAs: 'vm',
+        data: {
+          title: 'Platform'
+        }
+      })
       .state('home.dashboard', {
         url: '/dashboard',
+        controller: 'DashboardController',
+        controllerAs: 'vm',
         templateUrl: 'app/views/dashboard.html',
         data: {
           title: 'Dashboard'
         }
       })
-      .state('home.profile', {
-        url: '/profile',
-        templateUrl: 'app/views/profile.html',
-        controller: 'ProfileController',
+      .state('home.mobile', {
+        url: '/mobile',
+        controller: 'MobileController',
         controllerAs: 'vm',
+        templateUrl: 'app/views/mobile.html',
         data: {
-          title: 'Profile'
-        }
-      })
-      .state('home.table', {
-        url: '/table',
-        controller: 'TableController',
-        controllerAs: 'vm',
-        templateUrl: 'app/views/table.html',
-        data: {
-          title: 'Table'
+          title: 'Mobile'
         }
       });
 
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/platform');
 
     $mdThemingProvider
       .theme('default')
-        .primaryPalette('grey', {
-          'default': '600'
+        .primaryPalette('teal', {
+          'default': '300'
         })
         .accentPalette('teal', {
-          'default': '500'
+          'default': '300'
         })
-        .warnPalette('defaultPrimary');
-
-    $mdThemingProvider.theme('dark', 'default')
-      .primaryPalette('defaultPrimary')
-      .dark();
+        .warnPalette('magenta')
+        .backgroundPalette('white');
 
     $mdThemingProvider.theme('grey', 'default')
       .primaryPalette('grey');
 
-    $mdThemingProvider.theme('custom', 'default')
-      .primaryPalette('defaultPrimary', {
-        'hue-1': '50'
-    });
+    $mdThemingProvider.theme('white', 'default')
+      .primaryPalette('white');
 
-    $mdThemingProvider.definePalette('defaultPrimary', {
-      '50':  '#FFFFFF',
-      '100': 'rgb(255, 198, 197)',
+    $mdThemingProvider.definePalette('magenta', {
+      '50':  '#E75753',
+      '100': '#E75753',
       '200': '#E75753',
       '300': '#E75753',
       '400': '#E75753',
@@ -79,6 +76,24 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
       'A400': '#E75753',
       'A700': '#E75753'
     });
+
+  $mdThemingProvider.definePalette('white', {
+    '50': '#FFFFFF',
+    '100': '#FFFFFF',
+    '200': '#FFFFFF',
+    '300': '#FFFFFF',
+    '400': '#FFFFFF',
+    '500': '#FFFFFF',
+    '600': '#FFFFFF',
+    '700': '#FFFFFF',
+    '800': '#FFFFFF',
+    '900': '#FFFFFF',
+    'A100': '#FFFFFF',
+    'A200': '#FFFFFF',
+    'A400': '#FFFFFF',
+    'A700': '#FFFFFF',
+    'contrastDefaultColor': 'dark'
+  });
 
     $mdIconProvider.icon('user', 'assets/images/user.svg', 64);
   });

@@ -10,19 +10,19 @@
   function navService($q){
     var menuItems = [
       {
+        name: 'Platform',
+        icon: 'whatshot',
+        sref: '.platform'
+      },
+      {
         name: 'Dashboard',
-        icon: 'dashboard',
+        icon: 'desktop_windows',
         sref: '.dashboard'
       },
       {
-        name: 'Profile',
-        icon: 'person',
-        sref: '.profile'
-      },
-      {
-        name: 'Table',
-        icon: 'view_module',
-        sref: '.table'
+        name: 'Mobile',
+        icon: 'phone_android',
+        sref: '.mobile'
       }
     ];
 
