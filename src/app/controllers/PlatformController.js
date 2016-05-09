@@ -3,25 +3,18 @@
   angular
     .module('app')
     .controller('PlatformController', [
+      '$scope', '$firebaseArray',
       PlatformController
     ]);
 
-  function PlatformController() {
+  function PlatformController($scope, $firebaseArray) {
     var vm = this;
-
-    vm.user = {
-      title: 'Admin',
-      email: 'contact@flatlogic.com',
-      firstName: '',
-      lastName: '' ,
-      company: 'FlatLogic Inc.' ,
-      address: 'Fabritsiusa str, 4' ,
-      city: 'Minsk' ,
-      state: '' ,
-      biography: 'We are young and ambitious full service design and technology company. ' +
-      'Our focus is JavaScript development and User Interface design.',
-      postalCode : '220007'
-    };
+    console.log('hey');
+    console.log(this);
+    var platformRef = new Firebase("https://jebs-a-mess.firebaseio.com/platform");
+    // download the data from a Firebase reference into a (pseudo read-only) array
+    // all server changes are applied in realtime
+    $scope.environments = $firebaseArray(platformRef);
   }
 
 })();

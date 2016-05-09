@@ -1,14 +1,10 @@
-<md-content ng-controller="ControlPanelController as vm" class="md-padding">
-    <md-progress-linear class="widget-progress md-accent" md-mode="determinate"
-                        value="{{vm.determinateValue}}" ng-show="vm.showProgress">
-    </md-progress-linear>
+<md-content class="md-padding">
+<pre>{{environment | json}}</pre>
+<p>{{ environment.status }}</p>
+  <md-radio-group ng-model="environment.status" ng-change='environments.$save(environment)'>
+    <md-radio-button class="md-accent" value="Good">Good</md-radio-button>
+    <md-radio-button class="md-accent" value="Building">Building</md-radio-button>
+    <md-radio-button class="md-accent" value="Problems">Problems</md-radio-button>
+  </md-radio-group>
 
-    <md-radio-group ng-model="vm.reloadServer">
-        <md-radio-button class="md-accent" value="Staging">Staging server</md-radio-button>
-        <md-radio-button class="md-accent" value="Production">Production server</md-radio-button>
-    </md-radio-group>
-
-    <md-button class="md-raised md-warn" ng-click="vm.performProgress()">
-        Reload server
-    </md-button>
 </md-content>

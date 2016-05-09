@@ -1,4 +1,4 @@
-<div layout-gt-md="row">
+<!-- <div layout-gt-md="row">
   <panel-widget flex title="Site visitors" template="app/views/partials/visitors.html" class="fixed-height-widget"></panel-widget>
   <panel-widget flex title="Warnings" template="app/views/partials/warnings.html" class="fixed-height-widget"></panel-widget>
   <panel-widget flex title="Memory load" template="app/views/partials/memory.html" class="fixed-height-widget"></panel-widget>
@@ -13,4 +13,29 @@
 <div layout-gt-md="row">
   <panel-widget flex title="Performance" template="app/views/partials/performance.html" options="true"></panel-widget>
   <panel-widget flex title="TODO list" template="app/views/partials/checkboxes.html"></panel-widget>
+</div> -->
+
+
+<div layout-gt-md="row">
+  <div flex ng-repeat="environment in environments">
+    <section layout-margin class="panel-widget">
+      <md-toolbar md-theme="default" class="md-hue-1 panel-widget-toolbar">
+        <div class="md-toolbar-tools">
+          <h3 class="panel-widget-title">{{ environment.$id }}</h3>
+          <span flex></span>
+        </div>
+      </md-toolbar>
+      <md-content class="md-padding">
+        <md-radio-group ng-model="environment.status" ng-change='environments.$save(environment)'>
+          <md-radio-button class="md-accent" value="Good">Good</md-radio-button>
+          <md-radio-button class="md-accent" value="Building">Building</md-radio-button>
+          <md-radio-button class="md-accent" value="Borked">Borked</md-radio-button>
+        </md-radio-group>
+      </md-content>
+    </section>
+  </div>
 </div>
+
+
+
+                

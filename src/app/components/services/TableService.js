@@ -10,51 +10,39 @@
   function tableService($q){
     var tableData = [
       {
-        issue: 'Nested views',
+        issue: 'Patient IO Skin',
         progress: 100,
         status: 'Done',
         class: 'md-accent'
       },
       {
-        issue: 'Table component',
+        issue: 'Side Navigation',
+        progress: 100,
+        status: 'Done',
+        class: 'md-accent'
+      },
+      {
+        issue: 'Firebase Integration',
         progress: 40,
-        status: 'Feedback',
-        class: ''
-      },
-      {
-        issue: 'Dashboard tiles',
-        progress: 100,
-        status: 'Done',
+        status: 'In Progress',
         class: 'md-accent'
       },
       {
-        issue: 'Panel widget',
-        progress: 84,
-        status: 'In progress',
-        class: 'orange'
-      },
-      {
-        issue: 'Form',
-        progress: 100,
-        status: 'Done',
+        issue: 'Platform Screen',
+        progress: 40,
+        status: 'In Progress',
         class: 'md-accent'
       },
       {
-        issue: 'Custom CSS',
-        progress: 20,
-        status: 'Feedback',
-        class: ''
-      },
-      {
-        issue: 'Add backend',
-        progress: 1,
+        issue: 'Dashboard Screen',
+        progress: 0,
         status: 'To do',
-        class: 'md-warn'
+        class: 'md-accent'
       },
       {
-        issue: 'Layout with sidebar',
-        progress: 100,
-        status: 'Done',
+        issue: 'Mobile Screen',
+        progress: 0,
+        status: 'To do',
         class: 'md-accent'
       }
     ];

@@ -11,7 +11,7 @@ angular.module('app')
                 '<section layout-margin class="panel-widget">' +
                 '  <md-toolbar md-theme="default" class="md-hue-1 panel-widget-toolbar">' +
                 '    <div class="md-toolbar-tools">' +
-                '      <h3 class="panel-widget-tittle">{{title}}</h3>' +
+                '      <h3 class="panel-widget-title">{{title}}</h3>' +
                 '      <span flex></span>' +
                 '      <md-button ng-show="options" ng-click="$showOptions = !$showOptions" class="md-icon-button" aria-label="Show options">' +
                 '        <i class="material-icons">more_vert</i>' +
